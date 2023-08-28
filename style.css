@@ -21,6 +21,8 @@ body {
     background-position: center;
     display: flex;
     flex-direction: column; /* Stack elements vertically */
+    background-attachment: fixed;
+
 }
 
 .content-header {
