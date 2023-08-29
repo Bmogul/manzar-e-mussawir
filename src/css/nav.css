@@ -1,92 +1,170 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #e2cdaf;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
+header {
+  background: #ba8448;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+  cursor: pointer;
+  padding: 0 1rem;
+  border-radius: 50%;
+  font-size: 20px;
 }
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+.toggle {
+  cursor: pointer;
+  padding: 25px 20px;
+  position: relative;
 }
-
-.nav-links li {
-    margin: 0 10px;
+nav {
+  flex: 1 1 100%;
 }
-
-.nav-links a {
-    text-decoration: none;
-    color: #603813;
-    transition: color 0.3s ease-in-out;
+nav ul {
+  list-style: none;
 }
-
-.nav-links a:hover {
-    color: white;
+#mobile-icon,
+[id^="submenu"] {
+  display: none;
 }
-
-.dropdown {
-    position: relative;
-    border-radius: 100%;
+nav a,
+nav label {
+  font-weight: 500;
+  font-size: 16px;
+  color: #603813;
+  background: #ba8448;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  height: 64px;
+  transition: color 0.2s ease-in-out;
 }
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ba8448;
-    border-radius: 10%;
-    z-index: 2;
-    text-align: center;
-    justify-content: center;
-    padding: 10px;
+nav a:hover,
+nav label:hover {
+  color: #e2cdaf;
 }
-
-.dropdown-content li {
-    list-style: none;
-    padding: 0px;
+.arrow {
+  margin-left: 9px;
+  margin-top: 4px;
+  color: #603813;
+  font-size: 10px;
 }
+section:nth-of-type(1) {
+  padding-top: 6rem;
+}
+/*------- mobile nav --------*/
+@media (max-width: 767px) {
+  nav ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    
+  }
+  #mobile-icon:checked ~ nav > ul {
+    max-height: 100vh;
+  }
+  .nav-items ul {
+    padding-left: 1rem;
+  }
+  [id^="submenu"]:checked ~ [class^="submenu"] {
+    max-height: 100vh;
+    overflow: visible;
+  }
 
-.dropdown:hover .dropdown-content {
+  .hamburger-icon {
+    width: 18px;
+    height: 3px;
+    background-color: #603813;
     display: block;
-}
+    position: relative;
+  }
+  .hamburger-icon:before,
+  .hamburger-icon:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #603813;
+    transition: all 0.2s;
+  }
+  .hamburger-icon:before {
+    top: 5px;
+  }
+  .hamburger-icon:after {
+    top: -5px;
+  }
+  #mobile-icon:checked ~ .toggle {
+    border-radius: 50em;
+    transition: all 0.4s ease-out;
+  }
 
-.dropdown-content li {
-    margin: 0;
-    padding: 10px;
-}
-
-.dropdown-content a {
-    color: #603813;
-    text-decoration: none;
-}
-
-.dropdown-content a:hover {
-    color: white;
-}
-
-.navbar {
-    background-color: #ba8448;
-    color: #603813;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    z-index: 1;
-    position: fixed;
+  /* mobile nav change hamburger to x on click */
+  #mobile-icon:checked ~ .toggle .hamburger-icon {
+    background-color: transparent;
+  }
+  #mobile-icon:checked ~ .toggle .hamburger-icon:before {
     top: 0;
-    width: 98%;
-    border-radius: 2%;
-    transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, display 0.32s ease-in-out;
+    transform: rotate(45deg);
+  }
+  #mobile-icon:checked ~ .toggle .hamburger-icon:after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  .hide-mobile {
+    display: none;
+  }
+}
+/*-------desktop nav --------*/
+@media (min-width: 768px) {
+  header {
+    flex-wrap: nowrap;
+  }
+  nav,
+  .logo {
+    flex: none;
+  }
+  .toggle,
+  nav label {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+  }
+  nav li {
+    position: relative;
+  }
+  nav ul ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+  li:hover > ul {
+    max-height: 100vh;
+    overflow: visible;
+  }
+  [class^="submenu"] {
+    flex-direction: column;
+    position: absolute;
+  }
+  .submenu-1,
+  .submenu-3 {
+    width: 140px;
+    left: 0;
+    /* border-radius: 2%; */
+  }
 }
 
-.navbar.transparent {
+#navbar.transparent {
     opacity: 0;
 }
 
