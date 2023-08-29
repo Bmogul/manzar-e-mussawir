@@ -1,4 +1,4 @@
-
+// import '../css/style.css'
 const navbar = document.getElementById('navbar');
 let prevScrollpos = window.scrollY;
 let scrolledDistance = 0; // To track how much scrolling was done since the navbar disappeared
