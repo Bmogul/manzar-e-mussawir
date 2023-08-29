@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Playfair+Display&display=swap');
+@import url('nav.css');
+@import url('card.css');
+*{
+    /* font-family: 'IBM Plex Sans', sans-serif; */
+    font-family: 'Playfair Display', serif;
+    color: #603813;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Adjust the height as needed */
+    background-image: url("gBG2.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    background-attachment: fixed;
+
+}
+
+.content-header {
+    flex: 1; /* Take available space and push the other elements down */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    margin-top: 50px;
+}
+
+.content-header img {
+    max-width: 100%;
+    /* height: 20%; */
+}
+
+.subtitle {
+    text-align: center;
+    max-width: 600px;
+    font-size: 25px;
+}
+
+.titlediv {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align content to the bottom */
+    align-items: flex-start; /* Align content to the left */
+    padding: 20px;
+    margin: 0px;
+}
+
+#mainTitle{
+    margin-bottom: 0px;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px; /* Add a gap between infoDivs */
+    background-color: #603813;
+    padding: 10px;
+    text-align: center;
+}
+
+.infoDiv {
+    padding: 10px 0; /* Add padding for spacing */
+}
+.infoDiv label:hover{
+    color: white;
+}
+
+.infoDiv:not(:last-child) {
+    border-right: 1px solid #e2cdaf; /* Add a border line to all but the last infoDiv */
+}
+
+
+.dates label{
+    color: #e2cdaf;
+    font-size: 25px;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+body{
+
+    background-color: #e2cdaf;
+}
+
+.img{
+
+    height: 40px;
+}
+
+.centered-text {
+    text-align: center;
+}
+.minititle{
+    margin-left:15%;
+}
+
+h1{
+    font-size: 50px;
+}
+h2{
+    font-size: 40px;
+}
+label{
+    font-size: 30px;
+}
+/* #e2cdaf = main background color
+#603813 = text color
+#ba8448 = header color */
+
+
+footer {
+    background-color: #603813;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.contact-info {
+    max-width: 50%;
+}
+.contact-info p{
+    color: #e2cdaf;
+}
+
+.map {
+    max-width: 50%;
+}
