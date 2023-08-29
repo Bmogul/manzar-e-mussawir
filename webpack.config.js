@@ -61,6 +61,7 @@ module.exports = {
             title: 'Manzar-e-Masawar dev',
             filename: 'index.html',
             template: './src/index.html', // Use the head template
+            // inject: 'body'
         }),
     ],
     optimization: {

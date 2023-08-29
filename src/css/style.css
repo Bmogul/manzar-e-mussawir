@@ -78,12 +78,22 @@ body {
     border-right: 1px solid #e2cdaf; /* Add a border line to all but the last infoDiv */
 }
 
-
 .dates label{
     color: #e2cdaf;
     font-size: 25px;
     transition: color 0.3s ease-in-out;
     cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .dates{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1,1fr);
+    }
+    .infoDiv:not(:last-child) {
+        /* border-bottom: 1px solid #e2cdaf; Add a border line to all but the last infoDiv */
+        border-right: none;
+    }
 }
 
 body{
