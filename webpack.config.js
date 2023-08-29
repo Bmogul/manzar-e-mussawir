@@ -20,11 +20,34 @@ module.exports = {
                 test: /\.css$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader'],
             },
-                        {
+            {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/resource',
+                use: [
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 65,
+                            },
+                            optipng: {
+                                enabled: false,
+                            },
+                            pngquant: {
+                                quality: [0.65, 0.9],
+                                speed: 4,
+                            },
+                            gifsicle: {
+                                interlaced: false,
+                            },
+                            webp: {
+                                quality: 75,
+                            },
+                        },
+                    },
+                ],
             },
-                        {
+            {
                 test: /\.html$/i,
                 loader: 'html-loader',
             },
@@ -34,13 +57,13 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].css',
         }),
-                new HtmlWebpackPlugin({
+        new HtmlWebpackPlugin({
             title: 'Manzar-e-Masawar dev',
             filename: 'index.html',
             template: './src/index.html', // Use the head template
         }),
     ],
-        optimization: {
+    optimization: {
         runtimeChunk: 'single',
     }
 };
