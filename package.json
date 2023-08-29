@@ -1,0 +1,28 @@
+{
+  "name": "manzar-e-masawar",
+  "version": "1.0.0",
+  "description": "landing page for manzar-e-masawar",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bmogul/manzar-e-mussawir.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bmogul/manzar-e-mussawir/issues"
+  },
+  "homepage": "https://github.com/Bmogul/manzar-e-mussawir#readme",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
