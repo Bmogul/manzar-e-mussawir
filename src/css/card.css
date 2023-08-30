@@ -69,6 +69,18 @@ div.card-row{
     background-attachment: fixed;
 }
 
+.infobox{
+    /* margin-top: 20px; */
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #603813;
+    color: #e2cdaf;
+    text-align: center;
+    justify-content: right;
+    margin-bottom: 50px;
+}
+
 /* .carousel {
     display: flex;
     overflow-x: scroll;

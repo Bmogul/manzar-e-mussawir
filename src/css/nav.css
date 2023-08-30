@@ -10,9 +10,10 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: fixed;
+  position: relative;
   width: 100%;
   z-index: 999;
+  color:#603813;
 }
 .logo {
   cursor: pointer;
