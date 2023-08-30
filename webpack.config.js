@@ -63,6 +63,12 @@ module.exports = {
             template: './src/index.html', // Use the head template
             // inject: 'body'
         }),
+        new HtmlWebpackPlugin({
+            title: 'Manzar-e-Masawar dev',
+            filename: 'galleryReg.html',
+            template: './src/galleryReg.html', // Use the head template
+            // inject: 'body'
+        }),
     ],
     optimization: {
         runtimeChunk: 'single',
