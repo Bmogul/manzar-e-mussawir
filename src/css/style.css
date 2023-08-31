@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('nav.css');
 @import url('card.css');
+@import url('flickity.css');
 /* Universal Selectors */
 * {
     font-family: 'Playfair Display', serif;
     /* color: #603813; */
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Body Styling */
@@ -38,6 +41,7 @@ a{
     display: flex;
     flex-direction: column;
     background-attachment: fixed;
+    background-color: #e2cdaf;
 }
 .header {
     position: relative;
@@ -49,7 +53,8 @@ a{
     display: grid;
     grid-template-columns: 1fr;
     /* background-color: #603813; */
-    height: 25vh;
+    height: 200px;
+    margin-bottom: .01%;
 
 }
 
@@ -57,8 +62,8 @@ a{
 
 .circle {
     justify-self: center;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
@@ -71,20 +76,47 @@ a{
     display: flex;
     flex-direction: column;
     background-attachment: fixed;
-    background-color: #ba8448;
+    background-color: #e2cdaf;
     z-index: 2;
-    color: #e2cdaf;
+    color: #603813;
     align-self: center;
 }
+.maincard {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 80px;
+
+    /* width: 65%; */
+    width: 600px;
+    height: 600px;
+    /* height: 50%; */
+    transition: transform 0.5s, box-shadow 0.3s;
+    text-align: left;
+    margin-bottom: 50px;
+    /* background-color: #804b1a; */
+    background-image: url("gBG2.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #bba28070;
+}
 .circle.top{
+    width: 300px;
+    height: 300px;
     justify-self: left;
-    margin-top: 60px;
+    margin-top: 190px;
     margin-left: 40px;
+    position: absolute;
+    z-index: 5;
+    /* background-color: #ba8448; */
 }
 
 .rectangle {
     margin-top: 190px;
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     height: 50px;
     background-color: #ba8448;
@@ -111,6 +143,9 @@ div.list{
     margin-bottom: 20px;
     padding: 20px;
     text-align: left;
+}
+.list li{
+ font-size: 20px;   
 }
 ul{
     text-align: left;
@@ -184,6 +219,7 @@ li{
 /* Background Styling */
 body {
     background-color: #e2cdaf;
+    /* background-color: #804b1a; */
 }
 
 /* Image Styling */
@@ -258,25 +294,57 @@ footer {
     .infoDiv:not(:last-child) {
         border-right: none;
     }
+    .maincard{
+        width: fit-content;
+        height: fit-content;
+        border-radius: 5%;
+    }
+
+
+}
+@media (max-width: 1200px){
+    div.col2{
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        align-items: center;
+        /* margin-left: 0px; */
+     
+        /* grid-template-rows: 1fr; */
+    }
+
     .infobox{
         padding-top: 160px;
     }
     .rightshift{
         margin-left: 0px;
     }
-
-}
-@media (max-width: 1090px){
-    div.col2{
-        display: flex;
-        flex-direction: column;
-        grid-template-columns: 1fr;
-        /* margin-left: 0px; */
-     
-        /* grid-template-rows: 1fr; */
-    }
 }
 
 .description{
     font-size: 20px;
+    text-align: left;
 }
+  
+  .gallery {
+    background: #EEE;
+  }
+  
+  .gallery-cell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+  }
+  
+  /* cell number */
+  .gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+  

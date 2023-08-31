@@ -12,6 +12,11 @@
     text-align: left;
     margin-bottom: 50px;
     margin-top: 50px;
+    /* background-image: url("gBG2.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; */
+    background-color: #e2cdaf;
 
     /* flex: 0 0 85%; */
     /* scroll-snap-align: start; */
@@ -33,32 +38,12 @@ div.card-row{
     margin: 10px;
 }
 
-.expand:hover {
+/* .expand:hover {
     transform: scale(1.1);
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
-}
-
-.maincard {
-
-    /* border: 1px solid #a01010; */
-    display: grid;
-    grid-template-columns: 1fr;
-    /* grd */
-    border-radius: 8px;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-    margin: auto;
-    width: 65%;
-    transition: transform 0.5s, box-shadow 0.3s;
-    padding: 10px;
-    text-align: left;
-    margin-bottom: 50px;
-    /* margin-top: 50px; */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover 
+} */
 
 
-    /* background-image: url("sibghatallah-03.png"); */
-
-    /* background-image: url(bgImg.png"); */
-}
 
 .cardcontainer{
     /* background-image: url("gBG2.png"); */
@@ -71,6 +56,7 @@ div.card-row{
 
 .infobox{
     /* margin-top: 20px; */
+    /* position:static; */
     padding-top: 40px;
     display: flex;
     flex-direction: column;
@@ -90,6 +76,7 @@ div.col2{
     gap: 50px;
     /* justify-c?ntent: center; */
     text-align: center;
+    justify-content: center;
     
 }
 .col2 p{
