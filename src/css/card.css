@@ -2,11 +2,13 @@
     /* border: 1px solid #a01010; */
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: .2fr 1.4fr .1fr;
     /* grd */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: auto;
-    width: 50%;
+    width: auto;
+    height: auto;
     transition: transform 0.5s, box-shadow 0.3s;
     padding: 10px;
     text-align: left;
@@ -39,7 +41,7 @@ div.card-row{
 }
 
 /* .expand:hover {
-    transform: scale(1.1);
+    transform: scale(1);
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover 
 } */
 
@@ -111,6 +113,7 @@ div.col2{
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Box shadow */
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+    text-align: center;
 }
 
 .button:hover {
