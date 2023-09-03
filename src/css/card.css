@@ -61,10 +61,12 @@ div.card-row{
     display: flex;
     flex-direction: column;
     background-color: #804b1a;
+    background-color: #bba28070;
     color: #e2cdaf;
+    color: #452c1f;
     text-align: center;
     justify-content: right;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     /* opacity: .; */
 }
 
@@ -84,8 +86,9 @@ div.col2{
 }
 .grid-wide{
     grid-column-end: span 2;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    justify-content: center;
+    /* flex-direction: column; */
 }
 
 /* .carousel {

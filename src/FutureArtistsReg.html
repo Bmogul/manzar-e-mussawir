@@ -5,7 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Future Artist</title>
 </head>
-<body>
-    
+<body class="infopage">
+    <header id="navbar">
+        <div class="logo">Manzar-e-Masawar</div>
+        <input type="checkbox" id="mobile-icon">
+        <label for="mobile-icon" class="toggle"><span class="hamburger-icon"></span></label>
+        <nav>
+          <ul class="nav-items">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li><a href="./index.html#about">About</a></li>
+
+            <li>
+              <a class="hide-mobile" href="#">Artists<span class="arrow">&#x25bc;</span></a>
+              <label for="submenu"> Artists<span class="arrow">&#x25bc;</span></label>
+              <input id="submenu" type="checkbox">
+              <ul class="submenu-1">
+                  <li><a href="./galleryReg.html">Gallery Registration</a></li>
+                  <li><a href="./ExpoReg.html">Expo Registration</a></li>
+                  <li><a href="./FutureArtistsReg.html">Future Artists</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Sponsers</a></li>
+          </ul>
+        </nav>
+      </header>
+      <footer>
+        <div class="contact-info">
+            <p>Email: info@ManzareMussawir.com</p>
+            <p>17730 Coventry Park Dr, Houston, TX 77084</p>
+        </div>
+        <div class="map">
+            <!-- You can embed a Google Maps iframe here -->
+            <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBeH1KdupaQhVQl2zFjnTzWARicMF5wW5E&q=Masjid+E+Mohammedi,+Coventry+Park+Dr,+Houston,+TX+77084" width="200" height="100" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </footer> 
 </body>
 </html>
