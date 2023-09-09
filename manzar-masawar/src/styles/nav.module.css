@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	padding: 0 2rem;
+	background-color: var(--mainColor);
+	color: var(--textColor);
+	z-index: 100;
+}
+
+.nav a {
+	margin: 0 1rem;
+	color: var(--textColor);
+	text-decoration: none;
+}
+
+.nav a:hover {
+	color: var(--secondaryColor);
+}
+
+.navbar .nav_btn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: var(--textColor);
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+}
+
+/* ... Your existing styles ... */
+
+.linkWithDropdown {
+	position: relative;
+  }
+  
+  .linkWithDropdown:hover .dropdown {
+	display: block;
+  }
+  
+  .dropdown {
+	display: none;
+	/* Add other styling for the dropdown */
+	position: absolute;
+	top: 100%; /* Position the dropdown below the link */
+	left: 0;
+	background-color: #ba8448;
+	padding: 10px;
+	text-align: left;
+	/* z-index: 100000000000; */
+    max-height: 0;
+	transition: max-height 0.5s ease-in-out;
+  }
+  
+  /* Add styles to show the dropdown */
+  .showDropdown {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	max-height: 100vh;
+    /* transform: translateY(-10px); Move it back to its original position */
+  }
+  
+  .dropdown ul {
+	list-style: none;
+	padding: 0;
+  }
+  
+  .dropdown li {
+	margin: 5px 0;
+  }
+
+.arrow {
+	margin-left: 9px;
+	margin-top: 4px;
+	color: #603813;
+	font-size: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+	.navbar .nav_btn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.navbar nav {
+		position: fixed;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: var(--mainColor);
+		transition: 1s;
+	}
+
+	.hide {
+		top: -100vh;
+	}
+
+	.navbar .show {
+		/* transform: translateY(100vh) !important; */
+		top: 0vh;
+	}
+
+	.nav .nav_close_btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	.nav a {
+		font-size: 1.5rem;
+	}
+}
