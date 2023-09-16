@@ -1,75 +1,65 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
-.navbar {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: 80px;
-	padding: 0 2rem;
-	background-color: var(--mainColor);
-	color: var(--textColor);
+.bgContainer{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.nav a {
-	margin: 0 1rem;
-	color: var(--textColor);
-	text-decoration: none;
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondaryColor);
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  clip-path:inset(0 0 0 0);
 }
 
-.nav a:hover {
-	color: var(--secondaryColor);
+.content_header {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.navbar .nav_btn {
-	padding: 5px;
-	cursor: pointer;
-	background: transparent;
-	border: none;
-	outline: none;
-	color: var(--textColor);
-	visibility: hidden;
-	opacity: 0;
-	font-size: 1.8rem;
+.bgImgCon{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }
 
-.navbar div,
-.nav {
-	display: flex;
-	align-items: center;
+/* .sib{
+  width: 100%;
+  height: 200px;
+  background-image: url("/sibghatallah-03.png");
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+.sibBox{
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  /* height: fit-content; */
+  /* margin: 0 500px; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.sibBox label{
+  /* max-width: 400px; */
 }
 
-@media only screen and (max-width: 1024px) {
-	.navbar .nav_btn {
-		visibility: visible;
-		opacity: 1;
-	}
-
-	.navbar nav {
-		position: fixed;
-		top: -100vh;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 1.5rem;
-		background-color: var(--mainColor);
-		transition: 1s;
-	}
-
-	.navbar .responsive_nav {
-		transform: translateY(100vh);
-	}
-
-	.nav .nav_close_btn {
-		position: absolute;
-		top: 2rem;
-		right: 2rem;
-	}
-
-	.nav a {
-		font-size: 1.5rem;
-	}
+/* Subtitle Styling */
+.subtitle {
+  text-align: center;
+  max-width: 600px;
+  font-size: 25px;
 }
