@@ -385,3 +385,20 @@ footer {
     }
 }
 
+
+.formBox form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.formBox label{
+    /* display: block; */
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.formBox input, .formBox textarea{
+    padding: 5px;
+}
