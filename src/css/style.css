@@ -355,6 +355,15 @@ footer {
     }
 }
 @media (max-width: 1200px){
+    .circle.top{
+        border-radius: 0%;
+        width: 100%;
+        margin: 0;
+
+    }
+    .rectangle{
+        visibility: hidden;
+    }
     div.col2{
         display: flex;
         flex-direction: column;
